@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: transparent;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Kaydırma çubuğu stilleri */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+body.dark-mode::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c2c2c2;
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;
+}
+
+body.dark-mode::-webkit-scrollbar-thumb {
+  background: #475569;
+  border: 3px solid #1e293b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
+}
+
+body.dark-mode::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Seçili metin stilleri */
+::selection {
+  background-color: rgba(76, 162, 205, 0.3);
+  color: #1d3557;
+}
+
+body.dark-mode ::selection {
+  background-color: rgba(56, 189, 248, 0.3);
+  color: #e2e8f0;
+}
+
+/* Mobil responsive ayarlar */
+@media (max-width: 576px) {
+  .container {
+    padding: 10px;
+  }
+}
+
+/* Tablet responsive ayarlar */
+@media (min-width: 577px) and (max-width: 992px) {
+  .container {
+    padding: 16px;
+  }
+}
+
+/* Koyu mod desteği */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+  
+  body.dark-mode {
+    background-color: #0f172a;
+    color: #e2e8f0;
+  }
+  
+  body.dark-mode .weather-card {
+    background-color: rgba(15, 23, 42, 0.85);
+  }
+  
+  body.dark-mode .app-title {
+    color: #e2e8f0;
+  }
+  
+  body.dark-mode .result-card {
+    background-color: rgba(30, 41, 59, 0.8);
+  }
+  
+  body.dark-mode .welcome-message {
+    background-color: rgba(30, 41, 59, 0.8);
+  }
+  
+  body.dark-mode .weather-details {
+    background-color: rgba(15, 23, 42, 0.7);
+  }
+}
